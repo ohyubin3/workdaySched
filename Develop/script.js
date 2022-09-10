@@ -1,0 +1,1 @@
+let currentDay = moment().format()

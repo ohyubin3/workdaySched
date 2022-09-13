@@ -6,16 +6,21 @@ let toDoEl = document.querySelector(".whatTodo");
 let saveButtons = document.querySelectorAll(".saveBtn");
 let textAreas = document.querySelectorAll(".whatTodo");
 
-console.log(saveButtons);
-
-let whatTodo = "";
+renderStorage();
+console.log(renderStorage);
 
 for (let i = 0; i < saveButtons.length; i++) {
   saveButtons[i].addEventListener("click", function (event) {
-    console.log(event.target);
-    console.log(textAreas[i].value);
+    // console.log(event.target);
+    // console.log(textAreas[i].value);
     localStorage.setItem(`hourTodo${i}`, textAreas[i].value);
   });
+}
+
+function renderStorage() {
+  for (let i = 0; i < textAreas.length; i++) {
+    localStorage.getItem(`hourTodo${i}`, textAreas[i].value);
+  }
 }
 
 // This is what the Save Button will do

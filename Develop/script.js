@@ -2,12 +2,10 @@ let currentDay = moment().format("MMMM Do, YYYY - dddd");
 $("#currentDay").text(currentDay);
 
 let timeEl = document.querySelector(".whatTime");
-// let toDoEl = document.querySelector(".whatTodo");
+let toDoEl = document.querySelector(".whatTodo");
 let saveButtons = document.querySelectorAll(".saveBtn");
 let textAreas = document.querySelectorAll(".whatTodo");
 let container = document.querySelector(".container");
-
-console.log(textAreas);
 
 renderStorage();
 
@@ -32,10 +30,6 @@ container.addEventListener("click", function (event) {
 function renderStorage() {
   for (let i = 8; i < 17; i++) {
     // localStorage.getItem(`whatTodo${i}`);
-    // console.log(textAreas[i]);
-    document.querySelectorAll(".whatTodo" + i);
-    // console.log(localStorage.getItem`hourTodo${textAreas[i].value}`);
+    console.log(localStorage.getItem(`hourTodo$`{i}));
   }
 }
-
-// localStorage.setItem(`hourTodo${event.target.parentElement.dataset.hour}`, event.target.previousElementSibling.value
